@@ -1,0 +1,10 @@
+extends ./layouts/chat-layout.pug
+
+block content
+    div(class='sign-in')
+        h2 MONGOLIA CHAT 
+        form(class='sign-form' action="/chat" id='chat-form' method='POST' enctype='application/x-www-form-urlencoded')
+            label Username
+            input(type='text' id='user' name='user' placeholder='Enter username' required autocomplete='off') 
+            br
+            button(type="submit")

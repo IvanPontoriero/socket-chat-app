@@ -1,0 +1,24 @@
+extends ./layouts/layout.pug 
+
+block content
+    div(class='add-product')
+        h1(class='form-text margin-right') ADD A PRODUCT 
+        div(class='form-container')
+            form(action='/addProduct' method='post' enctype='application/x-www-form-urlencoded')
+            legend(class='form-text format-form') enter the data of the product you want to upload 
+            div(class='fieldset')
+                label(for='title' class='form-text format-form')
+                    b title 
+                input(type='text' name='title' value='' placeholder='title')
+            div(class='fieldset')
+                label(for='price' class='form-text format-form')
+                    b price 
+                input(type='text' name='price' value='' placeholder='price')
+            div(class='fieldset')
+                label(for='thumbnail' class='form-text format-form')
+                    b thumbnail url
+                input(type='text' name='thumbnail' value='' placeholder='url')
+            div
+                button(type='submit' class='form-text add-btn' id='submit') SEND 
+            div(class='success')
+                p(class='success-text')=success

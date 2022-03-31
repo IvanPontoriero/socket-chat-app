@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href='styles.css' type='text/css')
+        title CHAT APP
+    body 
+        main(class='container')
+            nav(class='navbar')
+                h1 
+                    a(class='logo' href='/')
+                ul(class='primary-navigation')
+                    li 
+                        a(href='/') HOME 
+                    li 
+                        a(href='/addProduct') ADD PRODUCT 
+                    li 
+                        a(href='/chat') GO TO CHAT 
+            block content
+        script(src='/socket.io/socket.io.js')
+        script(src='/index.js')

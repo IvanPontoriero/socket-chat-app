@@ -1,0 +1,20 @@
+extends ./layouts/layout.pug 
+
+block content 
+    div(class='content')
+        h1(class='title')= title
+        div(class='main-container')
+            table(class='table')
+                thead(class='table-header')
+                    tr(class='table-row')
+                        th(class='table-cell' scope='col') PRODUCT
+                        th(class='table-cell' scope='col') PRICE
+                        th(class='table-cell' scope='col') THUMBNAIL 
+                tbody(class='table-body')
+                    each product in products 
+                        tr
+                            td(class='table-cell')= product.title
+                            td(class='table-cell')= product.price
+                            td(class='table-cell')= product.thumbnail
+            button(class='form-btn')
+                a(href='/addProduct')
