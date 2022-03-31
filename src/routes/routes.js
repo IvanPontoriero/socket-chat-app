@@ -15,7 +15,7 @@ router.get('/products-test', products.getFake)
 
 router.get('/sign-in', (req, res) => res.render('sign-in'))
 
-router.post('/sign-in', products.sendUserData)
+router.post('/sign-in', chats.loadData)
 
 router.get('/chat', chats.getChats)
 

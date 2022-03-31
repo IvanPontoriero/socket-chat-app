@@ -26,7 +26,9 @@ module.exports = {
 
     loadData: async (req, res) => {
         try {
-            await chats.saveMsg()
+            const { body } = req
+
+            await chats.saveMsg(body)
         } catch(err) {
             res.status(500).send({
                 error: err.message

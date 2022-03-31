@@ -8,7 +8,7 @@ class Chats {
                 firstname: { type: String, required: true},
                 lastname: { type: String, required: true},
                 email: { type: String, required: true},
-                age: { type: number, required: true},
+                age: { type: Number, required: true},
                 username: { type: String, required: true },
                 firstname: { type: String, required: true},
             },
