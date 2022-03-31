@@ -11,6 +11,12 @@ router.get('/addProduct', products.getForm)
 
 router.post('/addProduct', products.addProduct)
 
+router.get('/products-test', products.getFake)
+
+router.get('/sign-in', (req, res) => res.render('sign-in'))
+
+router.post('/sign-in', products.sendUserData)
+
 router.get('/chat', chats.getChats)
 
 module.exports = router

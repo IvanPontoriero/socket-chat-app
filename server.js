@@ -32,7 +32,7 @@ mongoose.connect(MONGODB_URI, {
         app.use(express.json())
         app.use(express.static(path.join(__dirname, 'public')))
         app.use(express.urlencoded({ extended: true }))
-        app.use('/', route)
+        app.use('/api', route)
 
         // Set template engine
         app.set('views', path.join(__dirname, 'src/views/'))

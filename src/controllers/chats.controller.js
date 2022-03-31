@@ -3,12 +3,34 @@ const moment = require('moment')
 
 module.exports = {
     getChats: async (req, res) => {
-        res.render('chat', {
-            time: moment().format('hh:mm')
-        })
+        try {
+            res.render('chat', {
+                time: moment().format('hh:mm')
+            })
+        } catch(err) {
+            res.status(500).send({
+                error: err.message
+            })
+        }
+    },
+
+    sendUserData: async (req, res) => {
+        try {
+            
+        } catch(err) {
+            res.status(500).send({
+                error: err.message
+            })
+        }
     },
 
     loadData: async (req, res) => {
-        await chats.saveMsg()
+        try {
+            await chats.saveMsg()
+        } catch(err) {
+            res.status(500).send({
+                error: err.message
+            })
+        }
     }
 }

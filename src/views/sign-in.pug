@@ -1,0 +1,25 @@
+extends ./layouts/chat-layout.pug
+
+block content
+    div(class='sign-in')
+        h2 Sign in 
+        form(class='sign-form' action="/chat" id='chat-form' method='POST' enctype='multipart/form-data')
+            label First Name
+            input(type='text' id='first-name' name='first-name' placeholder='Enter first name' required autocomplete='off') 
+            br
+            label Last Name
+            input(type='text' id='last-name' name='last-name' placeholder='Enter last name' required autocomplete='off') 
+            br
+            label Email
+            input(type='text' id='email' name='email' placeholder='Enter email' required autocomplete='off') 
+            br
+            label Age
+            input(type='text' id='age' name='age' placeholder='Enter age' required autocomplete='off') 
+            br
+            label Username
+            input(type='text' id='username' name='username' placeholder='Enter first name' required autocomplete='off') 
+            br
+            label Avatar 
+            input(type='file' id='avatar' name='avatar')
+            br
+            button(type="submit") Sign in

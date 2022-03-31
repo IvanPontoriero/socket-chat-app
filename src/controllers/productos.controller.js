@@ -4,9 +4,7 @@ module.exports = {
     getAll: async (req, res) => {
         try {
             const data = await product.getAll()
-            console.log(data)
             res.render('index', {
-                layout: 'layout',
                 title:'CATALOGUE',
                 products: data
             })
@@ -34,6 +32,22 @@ module.exports = {
             res.status(500).send({
                 error: err.message
             })
+        }
+    },
+
+    getFake: async (req, res) => {
+        try {
+            const data = await product.getFake()
+
+            res.render('index', { 
+                title:'FAKE CATALOGUE',
+                products: data
+            })
+        } catch(err) {
+            res.status(500).send({
+                error: err.message
+            })
+            console.log(err)
         }
     }
 }
